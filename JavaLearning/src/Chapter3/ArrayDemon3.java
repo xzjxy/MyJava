@@ -7,6 +7,7 @@ public class ArrayDemon3 {
     public static void main(String[] args) {
         int[] ages = {23, 10, 67, 78};
         System.out.println(ages.length);
+        System.out.println(ages);
         ages[0] = 19; //赋值
         for (int i = 0; i < ages.length; i++) {
             System.out.print(ages[i] + " ");
