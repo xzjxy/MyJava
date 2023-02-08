@@ -5,9 +5,9 @@ public class BubbleSort {
     public static void main(String[] args) {
         int[] arr = {0, 23, 45, 76, 12, 5, 90, 0};
         int temp;
-        for (int i = arr.length; i > 0; i--) {
+        for (int i = arr.length; i >= 1; i--) {
 //            System.out.println(arr[i]);
-            for (int j = 0; j < i - 1; j++)
+            for (int j = 0; j <= (i - 2); j++)
                 if (arr[j] > arr[j + 1]) {
                     temp = arr[j];
                     arr[j] = arr[j + 1];
