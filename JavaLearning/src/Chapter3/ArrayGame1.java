@@ -25,7 +25,8 @@ public class ArrayGame1 {
         //游戏开始
         System.out.println();
         System.out.println("数组完成了，开始猜吧");
-        here: //循环标识符
+        here:
+        //循环标识符
         while (true) {
             int guess = s.nextInt();
             boolean res = false; // bool 变量跳出循环
