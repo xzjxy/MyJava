@@ -3,6 +3,7 @@ package chapter2;
 public class Break_continue {
     // break 结束当前最近的外侧循环（所在循环）// 或者switch分支
     //continue 只能在循环内部使用，结束最近循环中的单次循环
+    // OUT: break OUT 利用our标识符跳出多重循环
     public static void main(String[] args) {
         for (int i = 0; i < 5; i++) {
             System.out.println(i);
