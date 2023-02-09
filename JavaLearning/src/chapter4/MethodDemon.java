@@ -19,7 +19,7 @@ public class MethodDemon {
         return a + b;
     }
 
-    //计算1-n的和
+    //计算1-n的和;
     public static int addn(int n) {
         int sum = 0;
         for (int i = 1; i <= n; i++) {
