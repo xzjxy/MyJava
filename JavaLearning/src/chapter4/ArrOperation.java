@@ -1,7 +1,7 @@
 package chapter4;
 
 public class ArrOperation {
-    // return 具有跳出循环的作用
+    // return 跳出并立刻结束当前方法执行
     public static void main(String[] args) {
         int[] arry1 = {21, 34, 54, 89};
         int[] arry2 = null;
