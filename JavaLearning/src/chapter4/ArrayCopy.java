@@ -7,11 +7,11 @@ public class ArrayCopy {
         int[] arr2 = new int[arr1.length];
         copy(arr1, arr2);
         output(arr1);
-        System.out.println("");
+        System.out.println(" ");
         output(arr2);
     }
 
-    // 复制元素函数
+    // 复制元素函数;
     public static void copy(int[] org, int[] dst) {
         if (org != null) {
             for (int i = 0; i < org.length; i++) {
