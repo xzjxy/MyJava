@@ -1,8 +1,8 @@
 package chapter4;
 
 public class EncryptNum {
-    // 加密算法 1 数字每一位 +5， 2 每一位对10取余， 3 数字逆序输出。
-    // 解密算法 (0-4 5 6-9)  +5 (5 - 14) (5-9 0 1-4)。
+    // 加密算法 1 数字每一位 +5， 2 每一位对10取余， 3 数字逆序输出
+    // 解密算法 (0-4 5 6-9)  +5 (5 - 14) (5-9 0 1-4)
     // 数组进行地址传递时， 进入函数改变地址对应数值 / 单纯值传递不会改变
     public static void main(String[] args) {
         System.out.println(encry(1983));
