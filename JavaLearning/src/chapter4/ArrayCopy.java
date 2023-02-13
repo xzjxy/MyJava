@@ -1,7 +1,9 @@
 package chapter4;
 
+import createboject.Car;
+
 public class ArrayCopy {
-    // 一个数组元素复制到另一个数组
+    // 一个数组元素复制到另一个数
     public static void main(String[] args) {
         int[] arr1 = {23, 54, 67, 90};
         int[] arr2 = new int[arr1.length];
