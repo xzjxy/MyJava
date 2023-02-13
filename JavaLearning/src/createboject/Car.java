@@ -21,13 +21,20 @@ public class Car {
     // 无参数构造器
     public Car(){
         System.out.println("这是个无参数构造器");
+        System.out.println("this在构造器中,"+this);
     }
 
     // 有参数构造器
-    public Car(String n, double p){
+    public Car(String name, double price){
         System.out.println("这是个有参数构造器");
-        name = n;
-        price =p;
+//        name = n;
+//        price =p;
+        // 这种赋值只是形参到形参，没改变实参
+//        name = name;
+//        price = price;
+        // this = 对象地址 可以用来传递参数赋值 推荐方法
+        this.name = name;
+        this.price = price;
     }
 
     // 行为（方法/函数）
@@ -37,5 +44,11 @@ public class Car {
 
     public void run() {
         System.out.println("价格为" + price + "万的" + name + "跑的很快");
+        System.out.println("this出现在方法中，"+this);
+    }
+
+    // this 用来代替当前对象， name 用来代替 传进来的参数
+    public void compete(String name){
+        System.out.println(name+"正在和"+this.name+"比赛。");
     }
 }
