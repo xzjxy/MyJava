@@ -18,6 +18,18 @@ public class Car {
     String name;
     double price;
 
+    // 无参数构造器
+    public Car(){
+        System.out.println("这是个无参数构造器");
+    }
+
+    // 有参数构造器
+    public Car(String n, double p){
+        System.out.println("这是个有参数构造器");
+        name = n;
+        price =p;
+    }
+
     // 行为（方法/函数）
     public void start() {
         System.out.println(name + "启动了");
