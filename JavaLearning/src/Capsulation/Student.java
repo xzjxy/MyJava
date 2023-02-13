@@ -1,7 +1,7 @@
 package Capsulation;
 
 public class Student {
-    // 对象变量私有化， 只能在对象内部使用， 需要自己写set 及 get 出入口
+    // 对象变量私有化，只能在对象内部使用， 需要自己写set 及 get 出入口
     private int age;
 
     public void setAge(int age) {
