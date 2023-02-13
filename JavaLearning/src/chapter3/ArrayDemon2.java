@@ -1,4 +1,4 @@
-package Chapter3;
+package chapter3;
 
 public class ArrayDemon2 {
     // 数组元素的访问  数组名[索引]

@@ -1,4 +1,4 @@
-package Chapter3;
+package chapter3;
 
 public class ArrayDemon1 {
     // 初始化数组

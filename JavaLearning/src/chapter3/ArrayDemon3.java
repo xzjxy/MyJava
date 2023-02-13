@@ -1,4 +1,4 @@
-package Chapter3;
+package chapter3;
 
 public class ArrayDemon3 {
     // 数组最大元素索引 length-1(元素个数大于0)

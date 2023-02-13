@@ -1,4 +1,4 @@
-package Chapter3;
+package chapter3;
 
 public class BubbleSort {
     //冒泡排序 0-n-1 / 0-n-2..../0-1
