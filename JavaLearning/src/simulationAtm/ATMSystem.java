@@ -55,7 +55,7 @@ public class ATMSystem {
         if (log) {
             Out:
             while (true) {
-                System.out.println("请选择操作类型：1 存款、2 取款、 3 修改密码、4 转账、 5 退出登录、 6 注销账户");
+                System.out.println("登录成功，请选择操作类型：1 存款、2 取款、 3 修改密码、4 转账、 5 退出登录、 6 注销账户");
                 String operNum = sc.next();
                 switch (operNum) {
                     // 登录：
@@ -84,7 +84,7 @@ public class ATMSystem {
 
                     case "6":
                         // 6 注销账户
-//                        deposit(atm, sc);
+                        cancellation(atm, cardId, sc);
                         break;
 
                     default:
@@ -97,22 +97,50 @@ public class ATMSystem {
 
     }
 
+    private static void cancellation(ArrayList<Account> atm, String cardId, Scanner sc) {
+        System.out.println("请输入登陆密码来注销账户：");
+        String oldPw = sc.next();
+        int index = 0;
+        for (int i = 0; i < atm.size(); i++) {
+            if (atm.get(i).getCardId().equals(cardId)) {
+                index = i;
+//                break;
+            }
+        }
+        while (atm.get(index).getPassWrd().equals(oldPw)) {
+            System.out.println("密码输入错误，请重新输入：");
+            oldPw = sc.next();
+        }
+        atm.remove(index);
+        System.out.println(atm.get(index).getUserName()+"先生/女士，您的账户已经注销成功！");
+    }
+
     private static void changePw(ArrayList<Account> atm, String cardId, Scanner sc) {
         System.out.println("请输入旧密码：");
         String oldPw = sc.next();
         Out:
-        while(true){
+        while (true) {
             for (int i = 0; i < atm.size(); i++) {
-                if(atm.get(i).getCardId().equals(cardId) && atm.get(i).getPassWrd().equals(oldPw)){
+                if (atm.get(i).getCardId().equals(cardId) && atm.get(i).getPassWrd().equals(oldPw)) {
                     System.out.println("请输入新密码：");
-                    String newPw = sc.next();
-                    atm.get(i).setPassWrd(newPw);
+                    String newPw1 = sc.next();
+                    System.out.println("请再次输入新密码：");
+                    String newPw2 = sc.next();
+                    while (!newPw1.equals(newPw2)) {
+                        System.out.println("两次密码输入不一致，请重新输入！");
+                        System.out.println("请输入新密码：");
+                        newPw1 = sc.next();
+                        System.out.println("请再次输入新密码：");
+                        newPw2 = sc.next();
+                        atm.get(i).setPassWrd(newPw2);
+                    }
+                    atm.get(i).setPassWrd(newPw2);
                     System.out.println("密码修改成功！");
                     break Out;
-                }
-                else{
+                } else {
                     System.out.println("输入密码错误，请重新输入！");
-                    oldPw = sc.next();
+                    break;
+//                    oldPw = sc.next();
                 }
             }
 
