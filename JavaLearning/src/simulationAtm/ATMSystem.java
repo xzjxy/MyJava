@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class ATMSystem {
     // 1 注册、2 登录、3 查询、4 存款、5 取款、6 转账、7 修改密码、8 注销账户
+    // return; 停止当前方法执行   break  结束最近外部循环
     public static void main(String[] args) {
         ArrayList<Account> atm = new ArrayList<>();
         System.out.println("==================ATM======================");
@@ -59,6 +60,7 @@ public class ATMSystem {
         System.out.println(acc.getCardId() + "\t" + acc.getUserName() + "\t" + acc.getMoney());
 
     }
+
     // 2 登录：
     private static void logIn(ArrayList<Account> atm, Scanner sc) {
         System.out.println("请输开户账号：");
@@ -195,6 +197,7 @@ public class ATMSystem {
 
         }
     }
+
     // 2.3 修改密码
     private static void changePw(ArrayList<Account> atm, String cardId, Scanner sc) {
         System.out.println("请输入旧密码：");
@@ -275,12 +278,12 @@ public class ATMSystem {
                     String pW = sc.next();
                     while (true) {
                         if (atm.get(indexFrom).getPassWrd().equals(pW)) {
-                            if(money <= atm.get(indexFrom).getMoney()){
+                            if (money <= atm.get(indexFrom).getMoney()) {
                                 atm.get(indexFrom).setMoney(atm.get(indexFrom).getMoney() - money);
                                 atm.get(indexTo).setMoney(atm.get(indexTo).getMoney() + money);
                                 System.out.println("转账成功！");
                                 break;
-                            }else{
+                            } else {
                                 System.out.println("您的账户没有那么多钱，请重新输入转账金额：");
                                 money = sc.nextDouble();
                             }
