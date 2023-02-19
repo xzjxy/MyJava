@@ -21,7 +21,6 @@ public class ATMSystem {
                     break;
                 case "2":
                     // 登录：1 存款/ 2 取款/ 3 修改密码/4转账/ 5退出登录/ 6注销账户
-//                    displayInfo(atm, sc);
                     logIn(atm, sc);
                     break;
                 case "3":
@@ -33,11 +32,6 @@ public class ATMSystem {
 
             }
         }
-
-//        for (int i = 0; i < atm.size(); i++) {
-//            System.out.println(atm.get(i).getCardId() + "\t" + atm.get(i).getUserName() + "\t" + atm.get(i).getMoney());
-//        }
-
     }
 
 
